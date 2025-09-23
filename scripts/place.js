@@ -1,14 +1,5 @@
-function calculateWindChill(tempC, windKmh) {
-  if (tempC <= 10 && windKmh > 4.8) {
-    let windChill =
-      13.12 +
-      0.6215 * tempC -
-      11.37 * Math.pow(windKmh, 0.16) +
-      0.3965 * tempC * Math.pow(windKmh, 0.16);
-    return windChill.toFixed(1);
-  } else {
-    return "N/A";
-  }
+function calculateWindChill(t, v) {
+  return (t <= 10 && v > 4.8) ? (13.12 + 0.6215*t - 11.37*Math.pow(v,0.16) + 0.3965*t*Math.pow(v,0.16)).toFixed(1) : "N/A";
 }
 
 document.addEventListener("DOMContentLoaded", () => {

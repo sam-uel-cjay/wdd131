@@ -63,3 +63,9 @@ footer p {
   margin: 0.3rem 0;
   font-size: 0.9rem;
 }
+
+@media (min-width: 768px) {
+  footer p:first-child::after {
+    content: " 🌸";
+  }
+}

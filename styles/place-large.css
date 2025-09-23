@@ -18,4 +18,8 @@
     top: 15%;
     right: 5%;
   }
+
+  .weather img {
+    display: none;
+  }
 }
