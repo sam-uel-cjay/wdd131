@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+  .hero {
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    width: 250px;
+    margin: 0; 
+  }
+
+  .data {
+    top: 15%;
+    left: 5%;
+  }
+
+  .weather {
+    top: 15%;
+    right: 5%;
+  }
+}
