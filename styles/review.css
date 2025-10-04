@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f1f4;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 400px;
+  background-color: #e6d7e9;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  background-color: #4b0049;
+  color: white;
+  padding: 1rem;
+  margin: -1.5rem -1.5rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+}
+
+form label,
+fieldset legend {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #4b0049;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #6a0070;
+}
+
+.required {
+  color: red;
+}
+
+footer {
+  text-align: center;
+  background-color: #4b0049;
+  color: white;
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Confirmation page for product review submission.">
+  <meta name="author" content="Chijike Samuel Ngozi Onyedinachi">
+  <meta name="robots" content="index, follow">
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/review.css">
+</head>
+
+<body>
+  <main>
+    <h1>Thank You for Your Review!</h1>
+    <p>Your feedback has been submitted successfully.</p>
+    <p>You have completed <span id="reviewCount"></span> review(s).</p>
+    <a href="form.html">Submit another review</a>
+  </main>
+
+  <footer>
+    <p>©2025 🌸 Chijike Samuel Ngozi Onyedinachi 🌸<br>Nigeria<br>
+      Last Modification: <span id="lastModified"></span>
+    </p>
+  </footer>
+
+  <script>
+    let count = Number(localStorage.getItem("reviewCount")) || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+    document.getElementById("reviewCount").textContent = count;
+
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

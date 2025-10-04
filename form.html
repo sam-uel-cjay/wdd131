@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Submit your review for one of our featured products.">
+  <meta name="author" content="Chijike Samuel Ngozi Onyedinachi">
+  <meta name="robots" content="index, follow">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles/review.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <h1>Product Review</h1>
+
+    <form action="review.html" method="get">
+      <label for="productName">Product Name <span class="required">*</span></label>
+      <select id="productName" name="productName" required>
+        <option value="" disabled selected>Choose a Product ...</option>
+      </select>
+
+      <fieldset>
+        <legend>Overall Rating <span class="required">*</span></legend>
+        <label><input type="radio" id="rate1" name="rating" value="1" required> ★☆☆☆☆</label><br>
+        <label><input type="radio" id="rate2" name="rating" value="2"> ★★☆☆☆</label><br>
+        <label><input type="radio" id="rate3" name="rating" value="3"> ★★★☆☆</label><br>
+        <label><input type="radio" id="rate4" name="rating" value="4"> ★★★★☆</label><br>
+        <label><input type="radio" id="rate5" name="rating" value="5"> ★★★★★</label>
+      </fieldset>
+
+      <label for="installDate">Date of Installation <span class="required">*</span></label>
+      <input type="date" id="installDate" name="installDate" required>
+
+      <fieldset>
+        <legend>Which features did you find useful in the product?<br><em>(Check all that apply)</em></legend>
+        <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label><br>
+        <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label><br>
+        <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label><br>
+        <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+      </fieldset>
+
+      <label for="writtenReview">Written Review <span>(Optional)</span></label>
+      <textarea id="writtenReview" name="writtenReview" rows="4"></textarea>
+
+      <label for="userName">Your Name <span>(Optional)</span></label>
+      <input type="text" id="userName" name="userName">
+
+      <input type="submit" value="Post Review">
+    </form>
+  </main>
+
+  <footer>
+    <p>©2025 🌸 Chijike Samuel Ngozi Onyedinachi 🌸<br>Nigeria<br>
+      Last Modification: <span id="lastModified"></span>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
