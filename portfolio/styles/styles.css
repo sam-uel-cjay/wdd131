@@ -106,26 +106,69 @@ footer {
   margin-top: 2rem;
 }
 
-/* ===== About Page ===== */
-.about-page .intro {
+/* === Alternating About Layout === */
+.intro-section {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
+  padding: 3rem 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
 }
 
-.about-page img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+.intro-section.left-image .intro-image {
+  order: 1;
+}
+
+.intro-section.left-image .intro-text {
+  order: 2;
+}
+
+.intro-section.right-image .intro-text {
+  order: 1;
+}
+
+.intro-section.right-image .intro-image {
+  order: 2;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-radius: 10px;
   object-fit: cover;
   border: 4px solid #38BDF8;
 }
 
-.about-page .bio p {
-  max-width: 600px;
-  line-height: 1.6;
+.intro-image .portrait {
+  aspect-ratio: 3/4;
 }
+
+.intro-image .landscape {
+  aspect-ratio: 16/9;
+}
+
+.intro-text {
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.intro-text h1 {
+  color: #1E3A8A;
+  margin-bottom: 1rem;
+}
+
+/* Make responsive */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 
 .skills {
   margin-top: 3rem;
